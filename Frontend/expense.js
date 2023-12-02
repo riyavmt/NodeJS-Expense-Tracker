@@ -23,7 +23,7 @@ async function add(e){
 function addToList(data){
     const li = document.createElement("li");
     li.id = data.id;
-    li.innerHTML=`<span> ${data.amt}-${data.des}-${data.ctg}
+    li.innerHTML=`<span> ${data.amt}-${data.des}-${data.ctg}</span>
     <button class="edit btn-sm btn-primary" onclick="edit(${data.id})">Edit</button> <button class = "delete btn-sm btn-danger" onclick="remove(${data.id})">Delete</button> `
 
     list.appendChild(li);
@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded',async()=>{
 
 async function remove(id){
     try{
-        const res = await axios.delete('http://localhost:3000/delete-expense/${id}')
+        const res = await axios.delete(`http://localhost:3000/delete-expense/${id}`)
         console.log(res);
         list.removeChild(document.getElementById(id));
     }

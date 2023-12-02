@@ -26,12 +26,12 @@ exports.deleteExpense = async (req,res)=>{
     catch(err){console.log(err)}
 }
 
-exports.editExpense = async(req,res)=>{
-    const id = req.params.id;
-    try{
-        const expense = await Expenses.findByPk(id);
-        res.json(user);
-    }
-    catch(err){console.log(err)}
-}
+// exports.editExpense = async(req,res)=>{
+//     const id = req.params.id;
+//     try{
+//         const expense = await Expenses.findByPk(id);
+//         res.json(user);
+//     }
+//     catch(err){console.log(err)}
+// }
 
