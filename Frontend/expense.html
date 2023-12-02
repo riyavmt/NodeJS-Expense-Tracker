@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker App</title>
+    <link rel ="stylesheet" href="expense.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
+</head>
+<body>
+    <div>
+        <h1><b>~Track your Expenses~</b></h1>
+    </div>
+    <div class = "container">
+        <form id="myForm">
+            <label for = "amt" class="form-label">Add amount</label><br>
+            <input type = "number" class = "form-control" name = "amt" id="amt"><br>
+            <label for = "des" class="form-label">Add description</label><br>
+            <input type = "text" class = "form-control" name = "des" id="des"><Br>
+            <label for = "ctg" class="form-label">Choose category</label><br>
+            <select class = " w-100" name = "ctg" id="ctg">
+                <option value ="Personal">Personal</option>
+                <option value ="Family">Family</option>
+                <option value ="Friends">Friends</option>
+                <option value ="Others">Others</option><br>
+            </select><br>
+            <br>
+
+            <button class = "btn btn-lg btn-dark w-100" type="submit">Add Expense</button>
+
+        </form>
+        <ul id="expList">Expense List:</ul>
+    </div>
+    <script src="expense.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>
